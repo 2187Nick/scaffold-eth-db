@@ -53,10 +53,10 @@ yarn deploy
 📱 Open http://localhost:3000 to see the app. Click "Grab Funds from Faucet"
 
 ```bash
-To test the database we will write a message on the blockchain:
+To test the database we will write a message on the blockchain. Type message then click Send Message:
 ```
 
-> code: await database.put({sender: update.from, message: newPurpose, gasUsed: parseInt(update.gasUsed['_hex']), blockNumber: update.blockNumber});
+> code: await database.put({sender: update.from, message: newPurpose});
 
 ![write_msg_here](https://user-images.githubusercontent.com/75052782/183679702-38431c6b-78a9-421a-9f6f-3c7997bf76b9.png)
 
@@ -79,8 +79,21 @@ Next enter a message to pull it's details stored in the database.
 
 ![single_msg_details](https://user-images.githubusercontent.com/75052782/183679948-97d431dd-7196-4388-bee3-1f13a7cfc725.png)
 
+```bash
+To create a new database enter a name and click Create.
+```
+
+![second_db](https://user-images.githubusercontent.com/75052782/183693554-130b6e78-2e0f-4499-b1a6-1b609b31c590.png)
+
+```bash
+10 seconds later it will appear in the dropdown menu.
+```
 
 ![second_db_dropdown](https://user-images.githubusercontent.com/75052782/183680186-809f0ea8-05de-4559-b0be-7be03fa879e8.png)
+
+```bash
+Select the new database and send a new message. Then check Deta to verify the new database.
+```
 
 ![second_db_deta](https://user-images.githubusercontent.com/75052782/183680464-f0db5e1c-4c3e-45c8-ae39-afa9e42c233b.png)
 
