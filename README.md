@@ -1,43 +1,92 @@
-# 🏗 Scaffold-ETH
+# 🏗 Scaffold-ETH-Database-v1
 
-> everything you need to build on Ethereum! 🚀
+> Scaffold-ETH stack plus Deta.sh nosql database! 🚀
 
-🧪 Quickly experiment with Solidity using a frontend that adapts to your smart contract:
+🧪 Quickly deploy and experiment with Solidity using a frontend that adapts to your smart contract
+🧪 And a free unlimited storage backend:
 
-![image](https://user-images.githubusercontent.com/2653167/124158108-c14ca380-da56-11eb-967e-69cde37ca8eb.png)
-
+![join_deta](https://user-images.githubusercontent.com/75052782/183682780-926d1918-f85a-4c21-a600-c1784542028e.png)
 
 # 🏄‍♂️ Quick Start
 
-Prerequisites: [Node (v16 LTS)](https://nodejs.org/en/download/) plus [Yarn](https://classic.yarnpkg.com/en/docs/install/) and [Git](https://git-scm.com/downloads)
+Create a free account on [deta.sh](https:/deta.sh).  Requires only an email address. 
 
-> clone/fork 🏗 scaffold-eth:
+> confirm your email then login to your deta account:
 
 ```bash
-git clone https://github.com/scaffold-eth/scaffold-eth.git
+A page will display your project key. Copy and save this key.
+```
+![project_key](https://user-images.githubusercontent.com/75052782/183680426-2b371f13-4f3c-4b31-bc3e-ae8c1e32119d.png)
+
+Code Prerequisites: [Node (v16 LTS)](https://nodejs.org/en/download/) plus [Yarn](https://classic.yarnpkg.com/en/docs/install/) and [Git](https://git-scm.com/downloads)
+
+> clone/fork 🏗 scaffold-eth-db:
+
+```bash
+git clone https://github.com/2187Nick/scaffold-eth-db.git
 ```
 
 > install and start your 👷‍ Hardhat chain:
 
 ```bash
-cd scaffold-eth
+cd scaffold-eth-db
 yarn install
 yarn chain
 ```
 
+💼 Add your Deta project key in `packages/react-app/.env`
+
 > in a second terminal window, start your 📱 frontend:
 
 ```bash
-cd scaffold-eth
+cd scaffold-eth-db
 yarn start
 ```
 
 > in a third terminal window, 🛰 deploy your contract:
 
 ```bash
-cd scaffold-eth
+cd scaffold-eth-db
 yarn deploy
 ```
+
+📱 Open http://localhost:3000 to see the app. Click "Grab Funds from Faucet"
+
+```bash
+To test the database we will write a message on the blockchain:
+```
+
+> code: await database.put({sender: update.from, message: newPurpose, gasUsed: parseInt(update.gasUsed['_hex']), blockNumber: update.blockNumber});
+
+![write_msg_here](https://user-images.githubusercontent.com/75052782/183679702-38431c6b-78a9-421a-9f6f-3c7997bf76b9.png)
+
+```bash
+Verify the data was written to your Deta database:
+```
+
+![deta_first_entries](https://user-images.githubusercontent.com/75052782/183680362-ca9d5da4-7b98-4975-aa55-81bd1700c003.png)
+
+```bash
+Fetch Data pulls all data from the database:
+```
+> code: await database.fetch();
+
+![fetch_all_data](https://user-images.githubusercontent.com/75052782/183679807-ecbe3777-d6ba-47f6-8824-72e3ee574201.png)
+
+```bash
+Next enter a message to pull it's details stored in the database.
+```
+
+![single_msg_details](https://user-images.githubusercontent.com/75052782/183679948-97d431dd-7196-4388-bee3-1f13a7cfc725.png)
+
+
+![second_db_dropdown](https://user-images.githubusercontent.com/75052782/183680186-809f0ea8-05de-4559-b0be-7be03fa879e8.png)
+
+![second_db_deta](https://user-images.githubusercontent.com/75052782/183680464-f0db5e1c-4c3e-45c8-ae39-afa9e42c233b.png)
+
+
+
+
 
 🔏 Edit your smart contract `YourContract.sol` in `packages/hardhat/contracts`
 
@@ -45,7 +94,7 @@ yarn deploy
 
 💼 Edit your deployment scripts in `packages/hardhat/deploy`
 
-📱 Open http://localhost:3000 to see the app
+
 
 # 📚 Documentation
 
