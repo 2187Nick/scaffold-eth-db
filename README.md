@@ -92,14 +92,17 @@ To create a new database enter a name and click Create.
 ![second_db_dropdown](https://user-images.githubusercontent.com/75052782/183680186-809f0ea8-05de-4559-b0be-7be03fa879e8.png)
 
 ```bash
-Select the new database and send a new message. Then check Deta to verify the new database.
+Select the new database and send a new message. Check Deta to verify the new database was created.
 ```
 
 ![second_db_deta](https://user-images.githubusercontent.com/75052782/183680464-f0db5e1c-4c3e-45c8-ae39-afa9e42c233b.png)
 
 
 
+# In v2 we will deploy an Express.js API running on our free Deta virtual machine.
 
+
+# 📚 Additional 
 
 🔏 Edit your smart contract `YourContract.sol` in `packages/hardhat/contracts`
 
