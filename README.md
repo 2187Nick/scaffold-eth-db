@@ -1,6 +1,6 @@
 # 🏗 Scaffold-ETH-Database-v1
 
-> Scaffold-ETH stack plus Deta.sh nosql database! 🚀
+# Scaffold-ETH stack plus Deta.sh NoSQL database! 🚀
 
 🧪 Quickly deploy and experiment with Solidity using a frontend that adapts to your smart contract
 🧪 And a free unlimited storage backend:
